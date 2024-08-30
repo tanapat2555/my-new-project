@@ -1,0 +1,465 @@
+.dashboard {
+    background-color: #fffdf9;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .contentWrapper {
+    flex-grow: 1;
+    padding: 0 15px;
+  }
+  
+  .dashboardHeader {
+    background-color: #15202b;
+    border-bottom: 1px solid #b1b1b1;
+    color: #fffdf9;
+    padding: 16px 70px;
+    text-align: center;
+  }
+  
+  .dashboardHeader h1 {
+    font: 500 24px/0.8 Kanit, sans-serif;
+    letter-spacing: 0.72px;
+  }
+  
+  .sectionTitle {
+    border-bottom: 1px solid #b1b1b1;
+    color: #15202b;
+    font: 500 24px/0.8 Kanit, sans-serif;
+    letter-spacing: 0.72px;
+    padding: 7px 0 14px;
+  }
+  
+  .menuBar {
+    background-color: #15202b;
+    border-right: 1px solid #b1b1b1;
+    color: #fffdf9;
+    display: flex;
+    flex-direction: column;
+    font: 400 16px/0.8 Kanit, sans-serif;
+    letter-spacing: 0.48px;
+    padding-bottom: 160px;
+    width: 250px;
+  }
+  
+  .avatar {
+    align-self: center;
+    aspect-ratio: 4.03;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    width: 202px;
+  }
+  
+  .userName {
+    border-top: 1px solid #b1b1b1;
+    color: #b1b1b1;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    padding: 29px 16px;
+  }
+  
+  .menuList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menuItem {
+    border-bottom: 1px solid #b1b1b1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .menuItem.active {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .menuIcon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+  
+  .logoutButton {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: #f22222;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font: inherit;
+    gap: 15px;
+    margin-top: auto;
+    padding: 16px;
+  }
+  
+  .logoutIcon {
+    width: 23px;
+    height: 20px;
+  }
+  
+  .overviewGrid {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  .overviewCard {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Kanit, sans-serif;
+    padding: 15px;
+    text-align: center;
+    width: 33.33%;
+  }
+  
+  .overviewCard.blue {
+    background-color: #15202b;
+    color: #fffdf9;
+  }
+  
+  .overviewCard.orange {
+    background-color: #f26522;
+    color: #fffdf9;
+  }
+  
+  .overviewCard.white {
+    border: 1px solid #15202b;
+    color: #15202b;
+  }
+  
+  .cardTitle {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+  }
+  
+  .cardValue {
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 1.44px;
+    margin-top: 10px;
+  }
+  
+  .stressLevelSection {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .chartWrapper {
+    border: 1px solid #15202b;
+    border-radius: 10px;
+    flex-grow: 1;
+    padding: 44px 13px;
+  }
+  
+  .stressChart {
+    width: 100%;
+    height: auto;
+  }
+  
+  .stressLevelCard {
+    background-color: #15202b;
+    border-radius: 10px;
+    color: #fffdf9;
+    padding: 24px;
+    text-align: center;
+    width: 33.33%;
+  }
+  
+  .stressIndicator {
+    margin-top: 13px;
+    width: 100%;
+  }
+  
+  .questionsSection {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .repliesCard {
+    background-color: #15202b;
+    border-radius: 10px;
+    color: #fffdf9;
+    padding: 15px;
+    text-align: center;
+    width: 33.33%;
+  }
+  
+  .repliesCount {
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 1.44px;
+    margin-top: 10px;
+  }
+  
+  .latestQuestions {
+    background-color: #15202b;
+    border-radius: 10px;
+    color: #fffdf9;
+    flex-grow: 1;
+    padding: 19px 16px;
+  }
+  
+  .questionsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+  }
+  
+  .questionItem {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid #b1b1b1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 12px;
+  }
+  
+  .questionText {
+    color: #fffdf9;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+    margin: 0;
+  }
+  
+  .questionMeta {
+    color: #b1b1b1;
+    font-size: 16px;
+    letter-spacing: 0.48px;
+    margin: 10px 0 0;
+  }
+  
+  .replyCount {
+    align-items: center;
+    color: #b1b1b1;
+    display: flex;
+    font-size: 16px;
+    gap: 5px;
+  }
+  
+  .replyIcon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .highStressSection {
+    margin-top: 20px;
+  }
+  
+  .stressCountCard {
+    background-color: #f22222;
+    border-radius: 10px;
+    color: #fffdf9;
+    margin-top: 15px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .stressCount {
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 1.44px;
+    margin-top: 10px;
+  }
+  
+  .userGrid {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  .userCard {
+    background-color: #15202b;
+    border-radius: 10px;
+    color: #fffdf9;
+    flex: 1;
+    padding: 26px 23px;
+  }
+  
+  .userName {
+    font: 500 16px/0.8 Kanit, sans-serif;
+    letter-spacing: 0.48px;
+    margin: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .dashboard {
+      flex-direction: column;
+    }
+  
+    .menuBar {
+      padding-bottom: 100px;
+      width: 100%;
+    }
+  
+    .contentWrapper {
+      padding: 0 10px;
+    }
+  
+    .dashboardHeader {
+      padding: 16px 20px;
+    }
+  
+    .dashboardHeader h1 {
+      font-size: 40px;
+    }
+  
+    .overviewGrid,
+    .stressLevelSection,
+    .questionsSection,
+    .userGrid {
+      flex-direction: column;
+    }
+  
+    .overviewCard,
+    .stressLevelCard,
+    .repliesCard,
+    .userCard {
+      width: 100%;
+    }
+  
+    .chartWrapper {
+      padding: 20px 10px;
+    }
+  
+    .questionItem {
+      flex-direction: column;
+    }
+  
+    .replyCount {
+      margin-top: 10px;
+    }
+  }
+  .overviewCard {
+    padding: 16px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .overviewCard:hover {
+    transform: scale(1.05);
+  }
+  .menuItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease, text-shadow 0.3s ease;
+    color: #333; /* สีตัวอักษรปกติ */
+  }
+  
+  .menuItem:hover {
+    transform: scale(1.1); /* ขยายขนาดให้ใหญ่ขึ้น 10% */
+    background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    cursor: pointer;
+    color: #007bff; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
+    font-weight: bold; /* ทำให้ตัวอักษรหนาขึ้น */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ตัวอักษร */
+  }
+  
+  .menuIcon {
+    margin-right: 10px;
+  }
+  
+  .active {
+    font-weight: bold; /* เพิ่มความหนาให้กับข้อความของรายการที่เลือก */
+    color: #007bff; /* เปลี่ยนสีข้อความให้โดดเด่น */
+  }
+  .questionsSection {
+    padding: 20px;
+  }
+  
+  .repliesCard,
+  .latestQuestions {
+    margin-bottom: 20px;
+  }
+  
+  .cardTitle {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .repliesCount {
+    font-size: 2em;
+  }
+  
+  .questionsList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .questionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #571b886b;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #280e1f; /* พื้นหลังปกติ */
+  }
+  
+  .questionItem:hover {
+    transform: scale(1.05); /* ขยายขนาดให้ใหญ่ขึ้น 5% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับรายการเมื่อ hover */
+  }
+  
+  .questionContent {
+    flex: 1;
+  }
+  
+  .questionText {
+    margin: 0;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+  }
+  
+  .questionItem:hover .questionText {
+    color: #007bff; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
+  }
+  
+  .questionMeta {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .replyCount {
+    display: flex;
+    align-items: center;
+  }
+  
+  .replyIcon {
+    margin-right: 5px;
+  }
+  .logoutButton {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #010f1d; /* สีพื้นหลังของปุ่ม */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* เพิ่ม transition สำหรับการขยายและเปลี่ยนสีพื้นหลัง */
+  }
+  
+  .logoutButton:hover {
+    transform: scale(1.1); /* ขยายขนาดของปุ่มขึ้น 10% */
+    background-color: #d61114; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+  }
+  
+  .logoutIcon {
+    margin-right: 10px; /* เพิ่มระยะห่างระหว่างไอคอนและข้อความ */
+  }
+  
