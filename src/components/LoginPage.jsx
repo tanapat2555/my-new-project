@@ -1,14 +1,27 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // เพิ่มการ import useNavigate
+import { useNavigate } from 'react-router-dom'; 
+import swal from 'sweetalert'; 
 import styles from './LoginPage.module.css';
 
 const LoginPage = () => {
-  const navigate = useNavigate(); // ใช้ useNavigate สำหรับเปลี่ยนหน้า
+  const navigate = useNavigate(); 
 
   const handleLogin = (e) => {
-    e.preventDefault(); // ป้องกันการ reload หน้า
-    // หลังจากตรวจสอบความถูกต้องของข้อมูลแล้ว
-    navigate('/dashboard'); // เปลี่ยนหน้าไปยัง Dashboard
+    e.preventDefault(); 
+
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (email === 'tanapat.supasa2559@gmail.com' && password === 'ootoom2545') {
+      
+      swal("Success", "Login successful!", "success").then(() => {
+        navigate('/dashboard'); 
+      });
+    } else {
+      
+      swal("Error", "Invalid email or password", "error");
+    }
   };
 
   return (
@@ -79,4 +92,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage; 
+export default LoginPage;
