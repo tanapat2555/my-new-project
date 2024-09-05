@@ -1,0 +1,38 @@
+.tableWrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+  
+  .userTable {
+    width: 100%;
+    border-collapse: collapse;
+    font: 400 16px/13px Kanit, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+  
+  .userTable th,
+  .userTable td {
+    padding: 16px;
+    text-align: left;
+    border: 1px solid #000;
+  }
+  
+  .userTable th {
+    background-color: #3d4f60;
+    color: #fefefe;
+    font-size: 24px;
+    line-height: 19px;
+  }
+  
+  .userTable td {
+    background-color: #fff;
+  }
+  
+  .editButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Font Awesome 6 Free', -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 36px;
+    line-height: 0.8;
+    color: #000;
+  }

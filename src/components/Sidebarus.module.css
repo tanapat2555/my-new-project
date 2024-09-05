@@ -1,0 +1,97 @@
+.sidebar {
+    background-color: #15202b;
+    border-right: 1px solid #b1b1b1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 108px;
+    color: #fffdfa;
+    letter-spacing: 0.48px;
+    font: 400 16px/0.8 Kanit, sans-serif;
+    width: 250px;
+  }
+  
+  .logo {
+    aspect-ratio: 4.03;
+    object-fit: contain;
+    width: 202px;
+    align-self: center;
+    margin-top: 20px;
+  }
+  
+  .userName {
+    border-top: 1px solid #b1b1b1;
+    font-size: 18px;
+    color: #b1b1b1;
+    letter-spacing: 0.54px;
+    padding: 29px 16px;
+  }
+  
+  .navigation {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menuItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease, text-shadow 0.3s ease;
+    color: #333; /* สีตัวอักษรปกติ */
+  }
+  
+  .menuItem:last-child {
+    border-bottom: 1px solid #b1b1b1;
+  }
+  
+  .menuItem.active {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .menuIcon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+  
+  .logoutButton {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #f22222;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    margin-top: auto;
+    font: inherit;
+  }
+  
+  .logoutIcon {
+    width: 23px;
+    height: 23px;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 991px) {
+    .sidebar {
+      padding-bottom: 100px;
+    }
+    
+    .userName {
+      padding-right: 20px;
+    }
+  }
+ 
+  .menuItem:hover {
+    transform: scale(1.1); /* ขยายขนาดให้ใหญ่ขึ้น 10% */
+    background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    cursor: pointer;
+    color: #007bff; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
+    font-weight: bold; /* ทำให้ตัวอักษรหนาขึ้น */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ตัวอักษร */
+  }
+  
+  .active {
+    font-weight: bold; /* เพิ่มความหนาให้กับข้อความของรายการที่เลือก */
+    color: #007bff; /* เปลี่ยนสีข้อความให้โดดเด่น */
+  }

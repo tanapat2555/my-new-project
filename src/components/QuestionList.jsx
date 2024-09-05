@@ -1,36 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './QuestionList.module.css';
 import Sidebar from './Sidebar';
 import SearchBar from './SearchBar';
 import QuestionItem from './QuestionItem';
 
 const QuestionList = () => {
-  const questions = [
+  const [questions] = useState([
     {
       id: 1,
       title: 'ผมไม่มีเงินแต่อยากพบหมอ',
-      votes: 0,
+      likes: 0,
       date: '28 ก.ค. 2567',
-      author: 'รัสมุส ฮอยลุนด์',
-      authorId: '007'
+      author: 'มีน ',
+      authorId: ''
     },
     {
       id: 2,
       title: 'ต้องรู้สึกเครียดขนาดไหนถึงพบจิตแพทย์ได้เหรอ ครับ',
-      votes: 0,
+      likes: 0,
       date: '24 ก.ค. 2567',
-      author: 'รัสมุส ฮอยลุนด์',
-      authorId: '007'
+      author: 'กาย',
+      authorId: ''
     },
     {
       id: 3,
       title: 'ผมมีปัญหากับแฟน',
-      votes: 1,
+      likes: 1,
       date: '22 ก.ค. 2567',
-      author: 'รัสมุส ฮอยลุนด์',
-      authorId: '007'
+      author: 'ภูผา',
+      authorId: ''
     }
-  ];
+  ]);
+
+  const [filteredQuestions, setFilteredQuestions] = useState(questions);
+
+  // ฟังก์ชันสำหรับค้นหา
+  const handleSearch = (query) => {
+    if (!query) {
+      setFilteredQuestions(questions);
+      return;
+    }
+
+    const lowerCaseQuery = query.toLowerCase();
+    const result = questions.filter((question) =>
+      question.title.toLowerCase().includes(lowerCaseQuery) ||
+      question.author.toLowerCase().includes(lowerCaseQuery)
+    );
+    setFilteredQuestions(result);
+  };
 
   return (
     <div className={styles.container}>
@@ -39,9 +56,9 @@ const QuestionList = () => {
         <h1 className={styles.pageTitle}>คำถามจากผู้ใช้</h1>
         <div className={styles.contentWrapper}>
           <h2 className={styles.sectionTitle}>คำถามทั้งหมด</h2>
-          <SearchBar />
+          <SearchBar onSearch={handleSearch} />
           <section className={styles.questionList}>
-            {questions.map((question) => (
+            {filteredQuestions.map((question) => (
               <QuestionItem key={question.id} {...question} />
             ))}
           </section>

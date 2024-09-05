@@ -52,13 +52,11 @@
   }
   
   .menuItem {
-    border-top: 1px solid rgba(177, 177, 177, 1);
-    border-bottom: 1px solid rgba(177, 177, 177, 1);
-    z-index: 10;
     display: flex;
-    gap: 16px;
-    white-space: nowrap;
-    padding: 16px 17px;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease, text-shadow 0.3s ease;
+    color: #333; /* สีตัวอักษรปกติ */
   }
   
   @media (max-width: 991px) {
@@ -273,3 +271,46 @@
     white-space: nowrap;
     border: 0;
   }
+  .menuItem:hover {
+    transform: scale(1.1); /* ขยายขนาดให้ใหญ่ขึ้น 10% */
+    background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    cursor: pointer;
+    color: #007bff; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
+    font-weight: bold; /* ทำให้ตัวอักษรหนาขึ้น */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ตัวอักษร */
+  }
+  .active {
+    font-weight: bold; /* เพิ่มความหนาให้กับข้อความของรายการที่เลือก */
+    color: #007bff; /* เปลี่ยนสีข้อความให้โดดเด่น */
+  }
+  .questionList {
+    border-radius: 10px;
+    background-color: rgba(21, 32, 43, 1);
+    display: flex;
+    flex-direction: column;
+    margin-top: 82px;
+    width: 100%;
+    padding: 20px;
+    gap: 10px;
+  }
+  
+  .questionItem {
+    border: 1px solid rgba(177, 177, 177, 1);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .questionTitle {
+    font-size: 18px;
+    color: rgba(21, 32, 43, 1);
+    font-weight: 500;
+  }
+  
+  .questionDetails {
+    font-size: 14px;
+    color: rgba(125, 125, 125, 1);
+    margin-top: 5px;
+  }
+  

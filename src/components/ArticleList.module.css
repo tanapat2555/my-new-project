@@ -1,0 +1,62 @@
+/* src/components/ArticleList.module.css */
+.articleList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.articleItem {
+    display: flex;
+    align-items: center; /* Align items in the center vertically */
+    gap: 1rem; /* Space between image and text */
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.articleItem img {
+    width: 300px; /* Adjusted width for larger image */
+    height: 200px; /* Adjusted height for larger image */
+    object-fit: cover; /* Ensure image covers the container */
+    border-radius: 4px;
+}
+
+.articleItemContent {
+    flex: 1; /* Allow content to take up remaining space */
+}
+
+.articleItem h2 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.articleItem p {
+    color: #555;
+    margin: 0;
+}
+
+.articleActions {
+    display: flex;
+    gap: 0.5rem; /* Space between buttons */
+}
+
+.editButton, .deleteButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deleteButton {
+    background-color: #dc3545;
+}
+
+.editButton:hover, .deleteButton:hover {
+    opacity: 0.8;
+}
+.hidden {
+    display: none;
+  }
+  

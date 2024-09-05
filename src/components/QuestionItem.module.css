@@ -1,0 +1,84 @@
+.questionItem {
+  border: 1px solid #ddd; /* สีของขอบที่ดูอ่อนและนุ่มนวล */
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background-color: #fff; /* สีพื้นหลังสีขาวให้ดูสะอาด */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเพื่อให้ดูมีมิติ */
+  transition: box-shadow 0.2s ease; /* การเปลี่ยนเงาเวลาโฮเวอร์ */
+}
+
+.questionItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มความเข้มของเงาเมื่อโฮเวอร์ */
+}
+
+.questionHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.questionIcon {
+  width: 24px; /* หรือขนาดที่คุณต้องการ */
+  height: 24px; /* หรือขนาดที่คุณต้องการ */
+  object-fit: contain; /* ให้แน่ใจว่ารูปภาพไม่ถูกครอบตัด */
+background-color: #f5f5f5; /* สีพื้นหลังเทาอ่อน */
+}
+
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  flex-grow: 1;
+  white-space: nowrap; /* ตัดคำหากยาวเกินไป */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.questionMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likeCount {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.likeIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.questionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.875rem;
+  color: #777;
+}
+
+.postDate {
+  color: #555;
+}
+
+.authorName {
+  font-weight: 600;
+}
+
+.authorId {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.commentIcon {
+  width: 40px; /* หรือขนาดที่คุณต้องการ */
+  height: 40px; /* หรือขนาดที่คุณต้องการ */
+  object-fit: contain; /* ให้แน่ใจว่ารูปภาพไม่ถูกครอบตัด */
+}

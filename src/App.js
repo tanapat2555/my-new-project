@@ -1,9 +1,10 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ForgetPassword from './components/ForgetPassword';
-import LoginPage from './components/LoginPage'; // ตรวจสอบให้แน่ใจว่าเส้นทางนี้ถูกต้อง
-import Dashboard from './components/Dashboard'; // เพิ่มการ import Dashboard
-import QuestionList from './components/QuestionList'; // เพิ่มการ import QuestionList
+import LoginPage from './components/LoginPage';
+import Dashboard from './components/Dashboard';
+import QuestionList from './components/QuestionList';
+import ArticleManagement from './components/ArticleManagement';
+import UserManagement from './components/UserManagement'; // เพิ่มการ import UserManagement
 
 function App() {
   return (
@@ -12,8 +13,10 @@ function App() {
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<LoginPage />} />
-        <Route path="/dashboard" element={<Dashboard />} /> {/* เพิ่ม Route สำหรับ Dashboard */}
-        <Route path="/questions" element={<QuestionList />} /> {/* เพิ่ม Route สำหรับ QuestionList */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/questions" element={<QuestionList />} />
+        <Route path="/article-management" element={<ArticleManagement />} />
+        <Route path="/user-management" element={<UserManagement />} /> {/* เพิ่มเส้นทางใหม่ */}
       </Routes>
     </Router>
   );
