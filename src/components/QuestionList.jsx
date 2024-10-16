@@ -51,7 +51,7 @@ const QuestionList = () => {
 
   return (
     <div className={styles.container}>
-      <Sidebar />
+      <Sidebar activeTab="questions" /> {/* ส่งค่า activeTab */}
       <main className={styles.mainContent}>
         <h1 className={styles.pageTitle}>คำถามจากผู้ใช้</h1>
         <div className={styles.contentWrapper}>

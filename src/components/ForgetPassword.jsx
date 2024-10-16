@@ -4,19 +4,33 @@ import swal from "sweetalert";
 import styles from './ForgetPassword.module.css';
 
 function ForgetPassword() {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); 
     const email = document.getElementById("email").value;
-    
     
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailPattern.test(email)) {
-    
       swal("Error", "กรุณากรอกอีเมลในรูปแบบที่ถูกต้อง", "error");
     } else {
-      
-      swal("Success", "ลิงก์รีเซ็ตรหัสผ่านถูกส่งไปยังอีเมลของคุณ", "success");
+      try {
+        const response = await fetch('YOUR_API_ENDPOINT', { // แทนที่ด้วย URL ของ API
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        });
+
+        if (response.ok) {
+          swal("Success", "ลิงก์รีเซ็ตรหัสผ่านถูกส่งไปยังอีเมลของคุณ", "success");
+        } else {
+          swal("Error", "เกิดข้อผิดพลาดในการส่งอีเมล กรุณาลองอีกครั้ง", "error");
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        swal("Error", "เกิดข้อผิดพลาดในการเชื่อมต่อ กรุณาลองอีกครั้ง", "error");
+      }
     }
   };
 
