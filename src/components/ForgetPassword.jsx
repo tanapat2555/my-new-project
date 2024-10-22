@@ -14,7 +14,7 @@ function ForgetPassword() {
       swal("Error", "กรุณากรอกอีเมลในรูปแบบที่ถูกต้อง", "error");
     } else {
       try {
-        const response = await fetch('YOUR_API_ENDPOINT', { // แทนที่ด้วย URL ของ API
+        const response = await fetch('http://localhost:3000/forget-password ', { // แทนที่ด้วย URL ของ API
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ function ForgetPassword() {
                   alt="Form Logo"
                   className={styles.formLogo}
                 />
-                <h1 className={styles.formTitle}>เข้าสู่ระบบ</h1>
+                <h1 className={styles.formTitle}>ลืมรหัสผ่าน?</h1>
                 <form className={styles.formContent} onSubmit={handleSubmit}>
                   <div className={styles.inputWrapper}>
                     <img

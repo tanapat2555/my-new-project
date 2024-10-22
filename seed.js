@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const User = require('./models/user'); // ตรวจสอบให้แน่ใจว่าที่อยู่ถูกต้อง
 
-// เชื่อมต่อกับ MongoDB
-mongoose.connect('mongodb+srv://admin:mcUbdDjlBr5FGY67@cluster0.g1xzp.mongodb.net/SutRLAdmin', { useNewUrlParser: true, useUnifiedTopology: true })
+// เชื่อมต่อกับ MongoDB (ลบ useNewUrlParser และ useUnifiedTopology ออก)
+mongoose.connect('mongodb+srv://admin:mcUbdDjlBr5FGY67@cluster0.g1xzp.mongodb.net/SutRLAdmin')
   .then(() => {
     console.log('Connected to MongoDB');
     createUser();
@@ -13,7 +13,7 @@ mongoose.connect('mongodb+srv://admin:mcUbdDjlBr5FGY67@cluster0.g1xzp.mongodb.ne
 // ฟังก์ชันสร้างผู้ใช้ใหม่
 async function createUser() {
   const newUser = new User({
-    email: 'tanapat.supasa2559@gmail.com', 
+    email: 'chamac2478@gmail.com', 
     password: await bcrypt.hash('ootoom2545', 10), 
   });
 

@@ -1,0 +1,26 @@
+.stats-container {
+    background-color: #f9f9f9; /* สีพื้นหลังอ่อน */
+    border: 1px solid #ccc; /* เส้นขอบสีเทา */
+    border-radius: 8px; /* มุมโค้ง */
+    padding: 15px; /* ระยะห่างด้านใน */
+    margin-top: 20px; /* ระยะห่างจากกราฟ */
+    text-align: center; /* จัดกลางข้อความ */
+  }
+  
+  .stats-container h3 {
+    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+    color: #333; /* สีข้อความ */
+    font-weight: bold; /* ตัวหนา */
+  }
+  
+  .stats-container ul {
+    list-style: none; /* ไม่มีสัญลักษณ์ในรายการ */
+    padding: 0; /* ไม่มีระยะห่าง */
+  }
+  
+  .stats-container li {
+    margin: 5px 0; /* ระยะห่างในรายการ */
+    color: #555; /* สีข้อความในรายการ */
+    font-size: 16px; /* ขนาดตัวอักษร */
+  }
+  

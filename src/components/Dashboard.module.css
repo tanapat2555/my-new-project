@@ -462,4 +462,45 @@
   .logoutIcon {
     margin-right: 10px; /* เพิ่มระยะห่างระหว่างไอคอนและข้อความ */
   }
+  .chartContainer {
+    margin-top: 20px; /* หรือค่าอื่น ๆ ตามที่คุณต้องการ */
+    width: 100%; /* กำหนดความกว้าง */
+    height: 400px; /* กำหนดความสูงของ Chart */
+  }
+  .additionalInfo {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+  }
+  
+  .additionalInfo h2 {
+    margin-bottom: 10px;
+  }
+  
+  .additionalInfo p {
+    margin: 5px 0;
+  }
+  .statsContainer {
+    margin-top: 20px; /* ระยะห่างจากกราฟ */
+    padding: 15px; /* ระยะห่างภายใน */
+    background-color: #f9f9f9; /* สีพื้นหลังอ่อน */
+    border: 1px solid #ccc; /* เส้นขอบสีเทา */
+    border-radius: 8px; /* มุมโค้ง */
+    text-align: center; /* จัดกลางข้อความ */
+  }
+  
+  .statsBox {
+    margin-top: 10px; /* ระยะห่างจากหัวข้อ */
+    padding: 10px; /* ระยะห่างภายใน */
+    background-color: #fff; /* สีพื้นหลังขาว */
+    border: 1px solid #ddd; /* เส้นขอบสีเทาอ่อน */
+    border-radius: 5px; /* มุมโค้ง */
+  }
+  
+  .statsBox p {
+    margin: 5px 0; /* ระยะห่างในแต่ละบรรทัด */
+    color: #333; /* สีข้อความ */
+    font-size: 16px; /* ขนาดตัวอักษร */
+  }
   

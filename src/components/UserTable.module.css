@@ -1,3 +1,4 @@
+
 .tableWrapper {
     overflow-x: auto;
     margin-top: 20px;
@@ -35,4 +36,8 @@
     font-size: 36px;
     line-height: 0.8;
     color: #000;
+  }
+  .dashboardHeader h1 {
+    font: 500 24px/0.8 Kanit, sans-serif;
+    letter-spacing: 0.72px;
   }

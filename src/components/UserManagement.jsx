@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './UserManagement.module.css';
 import Sidebar from './SideBarus';
 import UserTable from './UserTable';
 import SearchBar from './Searchus';
 
 function UserManagement() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (term) => {
+    setSearchTerm(term); // อัปเดต searchTerm เมื่อมีการค้นหา
+  };
+
   return (
     <main className={styles.userManagement}>
       <Sidebar />
@@ -15,9 +21,9 @@ function UserManagement() {
         <section className={styles.userListSection}>
           <h2 className={styles.sectionTitle}>รายชื่อผู้ใช้ทั้งหมด</h2>
           <div className={styles.controlsWrapper}>
-            <SearchBar />
+            <SearchBar onSearch={handleSearch} /> {/* ส่งฟังก์ชันค้นหาไปยัง SearchBar */}
           </div>
-          <UserTable />
+          <UserTable searchTerm={searchTerm} /> {/* ส่ง searchTerm ไปยัง UserTable */}
         </section>
       </section>
     </main>

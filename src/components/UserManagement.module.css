@@ -1,55 +1,89 @@
 .userManagement {
-    background-color: #fffdfa;
-    display: flex;
-    overflow: hidden;
-  }
-  
-  .contentArea {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .pageHeader {
-    background-color: #15202b;
-    border-bottom: 1px solid #b1b1b1;
-    padding: 13px 70px;
-    text-align: center;
-  }
-  
+  background-color: #fffdfa;
+  display: flex;
+  overflow: hidden;
+  font-family: 'Kanit', sans-serif;
+}
+
+.contentArea {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Kanit', sans-serif;
+}
+
+.pageHeader {
+  background-color: #15202b;
+  border-bottom: 1px solid #b1b1b1;
+  padding: 13px 70px;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+}
+
+.pageHeader h1 {
+  color: #fffdfa;
+  font: 500 24px/0.8 Kanit, sans-serif;
+  letter-spacing: 0.72px;
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+}
+
+.userListSection {
+  padding: 0 15px;
+}
+
+.sectionTitle {
+  border-bottom: 1px solid #b1b1b1;
+  color: #15202b;
+  font: 500 24px/0.8 Kanit, sans-serif;
+  letter-spacing: 0.72px;
+  padding: 8px 0;
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+}
+
+.controlsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 33px;
+  font-family: 'Kanit', sans-serif;
+}
+
+@media (max-width: 991px) {
   .pageHeader h1 {
-    color: #fffdfa;
-    font: 500 24px/0.8 Kanit, sans-serif;
-    letter-spacing: 0.72px;
-    margin: 0;
-  }
-  
-  .userListSection {
-    padding: 0 15px;
+    padding: 0 20px;
   }
   
   .sectionTitle {
-    border-bottom: 1px solid #b1b1b1;
-    color: #15202b;
-    font: 500 24px/0.8 Kanit, sans-serif;
-    letter-spacing: 0.72px;
-    padding: 8px 0;
-    margin: 0;
+    padding-right: 20px;
   }
-  
-  .controlsWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 33px;
-  }
-  
-  @media (max-width: 991px) {
-    .pageHeader h1 {
-      padding: 0 20px;
-    }
-    
-    .sectionTitle {
-      padding-right: 20px;
-    }
-  }
+}
+/* UserManagement.module.css */
+.content {
+  margin-left: 20px; /* เพิ่มช่องว่างด้านซ้ายสำหรับ Sidebar */
+  flex-grow: 1; /* ทำให้พื้นที่ที่เหลือเต็ม */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Kanit', sans-serif;
+}
+.logoutButton {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: #f22222;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font: inherit;
+  gap: 15px;
+  margin-top: auto;
+  padding: 16px;
+}
+
+.logoutIcon {
+  width: 23px;
+  height: 20px;
+}
