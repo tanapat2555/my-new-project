@@ -19,7 +19,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.9.0",
     "mongoose": "^8.7.2",
-    "next-auth": "^4.24.7",
+    "next-auth": "^4.24.15",
     "nodemailer": "^6.9.15",
     "postcss": "^8.4.41",
     "react": "^18.3.1",
